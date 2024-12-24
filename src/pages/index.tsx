@@ -1,9 +1,14 @@
-import React from 'react'
+import React from "react";
+import Header from "@/components/globals/header";
 
 const Index = () => {
   return (
-    <div>Gadhi abhi start kr ise (bhageywan apne shub hatho se aramb kren is nacheez ka sath is pawitr mansoba me)</div>
-  )
-}
+    <>
+      <div className="">
+        <Header />
+      </div>
+    </>
+  );
+};
 
-export default Index
+export default Index;
