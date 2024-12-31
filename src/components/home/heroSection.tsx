@@ -11,16 +11,16 @@ const HeroSection = () => {
   useEffect(() => {
     const timers = [
       setTimeout(() => setActiveRipple(1), 0),
-      setTimeout(() => setActiveRipple(2), 1000),
-      setTimeout(() => setActiveRipple(3), 2000),
+      setTimeout(() => setActiveRipple(2), 500),
+      setTimeout(() => setActiveRipple(3), 1000),
     ];
 
     return () => timers.forEach((timer) => clearTimeout(timer));
   }, []);
 
   return (
-    <div className="-mt-[188px]">
-      <div className="relative">
+    <div className="-mt-[188px] ">
+      <div className="relative ">
         <div className="relative w-[1073px] h-[1073px] mx-auto flex items-center justify-center">
           <div
             className={`absolute w-full h-full bg-[#e9dff8] rounded-full transition-transform duration-1000 ease-out ${

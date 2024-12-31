@@ -8,7 +8,7 @@ interface WrapperProps {
 const Wrapper: React.FC<WrapperProps> = ({ children, className = "" }) => {
   return (
     <div
-      className={`lg:max-w-[1440px] md:max-w-[744px] max-w-[375px] p-5 mx-auto ${className}`}
+      className={`lg:max-w-[1440px] md:max-w-[744px] max-w-[375px]  mx-auto ${className}`}
     >
       {children}
     </div>

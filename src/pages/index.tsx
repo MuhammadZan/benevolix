@@ -1,16 +1,11 @@
 import React from "react";
-import Header from "@/components/globals/header";
-import HeroSection from "@/components/home/heroSection";
-
-import About from "@/components/home/about";
+import HomePage from "./homePage";
 
 const Index = () => {
   return (
     <>
       <div className="">
-        <Header />
-        <HeroSection />
-        <About />
+        <HomePage />
       </div>
     </>
   );
