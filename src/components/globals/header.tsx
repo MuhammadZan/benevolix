@@ -4,11 +4,11 @@ import Image from "next/image";
 const Header = () => {
   return (
     <>
-      <div className="flex justify-between gap-5 items-center">
+      <div className="flex justify-between gap-5 items-center relative z-50">
         <div className="">
           <Image src={logo} className="w-[200px]" alt="logo" />
         </div>
-        <div className="flex gap-8 items-center">
+        <div className="flex gap-8 items-center ">
           <p className="text-secondary text-light text-[16px] hover:underline cursor-pointer">
             Portfolio
           </p>

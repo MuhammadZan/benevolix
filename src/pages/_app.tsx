@@ -3,7 +3,7 @@ import "@/styles/globals.css";
 import Wrapper from "@/components/globals/wrapper";
 import { useRouter } from "next/router";
 
-const MyApp = ({ Component, pageProps }: AppProps) => {
+const _app = ({ Component, pageProps }: AppProps) => {
   const router = useRouter();
   const excludedRoutes = ["", ""];
 
@@ -18,4 +18,4 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
   );
 };
 
-export default MyApp;
+export default _app;
