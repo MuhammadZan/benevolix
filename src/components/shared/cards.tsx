@@ -18,7 +18,7 @@ const Cards: React.FC<Icard> = ({
 }) => {
   return (
     <div
-      className={`card w-[650px] h-[583px] rounded-[100px] relative overflow-hidden mt-10 p-10 ${className}`}
+      className={`card w-[850px] h-[583px] rounded-[100px] relative overflow-hidden mt-10 p-10 ${className}`}
     >
       <Image
         src={halfCircle}

@@ -4,6 +4,7 @@
 
 body {
   background-color: #f3eaff;
+  overflow-x: hidden;
 }
 
 .scale-0 {
