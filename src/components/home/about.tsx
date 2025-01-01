@@ -18,7 +18,7 @@ const About = () => {
         "Explore the latest web technologies and trends to elevate your online presence",
     },
     {
-      className: "bg-[#d6c9ea] inline-block",
+      className: "  bg-[#CDACFF] inline-block",
       number: "03",
       title: "Transform Your Business",
       description:
@@ -26,7 +26,7 @@ const About = () => {
     },
 
     {
-      className: "bg-[#CDACFF] inline-block",
+      className: "bg-[#d6c9ea] inline-block",
       number: "04",
       title: "Empowering Your Vision",
       description:

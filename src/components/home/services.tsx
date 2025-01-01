@@ -8,7 +8,7 @@ import "swiper/css";
 // import required modules
 import { EffectCards } from "swiper/modules";
 
-export default function App() {
+export default function Services() {
   return (
     <>
       <Swiper
