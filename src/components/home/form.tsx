@@ -6,7 +6,7 @@ import Button from "../shared/button";
 const Form = () => {
   return (
     <div>
-      <div className="flex justify-between my-32">
+      <div className="flex justify-between my-32 px-8">
         <div className="w-[400px]">
           <Image src={logo} alt="logo" className="-ml-8" />
           <p className="text-[14px] text-secondary mt-2 font-semibold">

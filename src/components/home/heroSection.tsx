@@ -19,29 +19,27 @@ const HeroSection = () => {
   }, []);
 
   return (
-    <div className="-mt-[188px] ">
-      <div className="relative ">
+    <div className="-mt-[188px]">
+      <div className="relative">
         <div className="relative w-[1073px] h-[1073px] mx-auto flex items-center justify-center">
           <div
-            className={`absolute w-full h-full bg-[#e9dff8] rounded-full transition-transform duration-1000 ease-out ${
+            className={`absolute w-full h-full bg-gradient-to-b from-[#e9dff8] to-transparent backdrop-blur-md rounded-full transition-transform duration-1000 ease-out ${
               activeRipple >= 3 ? "scale-1 opacity-100" : "scale-0 opacity-0"
             }`}
           ></div>
-
           <div
-            className={`absolute w-[777px] h-[777px] bg-[#e2d3f9] rounded-full transition-transform duration-1000 ease-out ${
+            className={`absolute w-[777px] h-[777px] bg-gradient-to-b from-[#e2d3f9] to-transparent backdrop-blur-md rounded-full transition-transform duration-1000 ease-out ${
               activeRipple >= 2 ? "scale-1 opacity-100" : "scale-0 opacity-0"
             }`}
           ></div>
 
           <div
-            className={`absolute w-[432px] h-[432px] bg-[#D6C9EA] rounded-full transition-transform duration-1000 ease-out ${
+            className={`absolute w-[432px] h-[432px] bg-gradient-to-b from-[#D6C9EA] to-transparent backdrop-blur-md rounded-full transition-transform duration-1000 ease-out ${
               activeRipple >= 1 ? "scale-1 opacity-100" : "scale-0 opacity-0"
             }`}
           ></div>
         </div>
 
-        {/* Heading */}
         <div className="w-[840px] mx-auto mt-32">
           <div className="absolute top-[350px]">
             <h1 className="text-[96px] text-secondary leading-10">Welcome</h1>
@@ -57,7 +55,6 @@ const HeroSection = () => {
           </div>
         </div>
 
-        {/* Cards Section */}
         <div className="-mt-[500px]">
           <div className="flex justify-between gap-5 mx-auto items-center w-[1200px]">
             <h1 className="text-[24px] text-[#7B7B7BED] w-[470px] leading-8 relative">

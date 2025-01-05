@@ -4,6 +4,7 @@ import HeroSection from "@/components/home/heroSection";
 import About from "@/components/home/about";
 import Form from "@/components/home/form";
 import Work from "@/components/home/work";
+import Slider from "@/components/home/sliders";
 
 const HomePage = () => {
   return (
@@ -12,6 +13,7 @@ const HomePage = () => {
       <HeroSection />
       <About />
       <Work />
+      <Slider />
       <Form />
     </>
   );

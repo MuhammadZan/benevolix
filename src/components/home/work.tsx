@@ -10,7 +10,7 @@ const Work = () => {
       scrollTrigger: {
         trigger: ".text-section",
         start: "top top",
-        end: "+=20000",
+        end: "+=22000",
         pin: true,
         scrub: 2,
         anticipatePin: 1,
