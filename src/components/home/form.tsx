@@ -40,7 +40,7 @@ const Form = () => {
 
           <div className="flex justify-between mt-20">
             <div className="w-[330px]">
-              <div className="flex flex-col ">
+              <div className="flex flex-col relative">
                 <label
                   htmlFor="name"
                   className="text-lg font-semibold text-black mb-1"
@@ -51,13 +51,14 @@ const Form = () => {
                   id="name"
                   type="text"
                   placeholder="Your Name"
-                  className="border-b border-black bg-transparent focus:outline-none text-gray-900"
+                  className="border-b border-gray-300  bg-transparent focus:outline-none text-gray-900"
                 />
+                <div className="hover-input"></div>
               </div>
             </div>
 
             <div className="w-[330px]">
-              <div className="flex flex-col ">
+              <div className="flex flex-col relative">
                 <label
                   htmlFor="name"
                   className="text-lg font-semibold text-black mb-1"
@@ -68,8 +69,9 @@ const Form = () => {
                   id="Email"
                   type="text"
                   placeholder="Your Email"
-                  className="border-b border-black bg-transparent focus:outline-none text-gray-900"
+                  className="border-b border-gray-300 bg-transparent focus:outline-none text-gray-900"
                 />
+                <div className="hover-input"></div>
               </div>
             </div>
           </div>
@@ -100,7 +102,7 @@ const Form = () => {
               <Button text=">$100k" className=" w-[210px]" />
             </div>
           </div>
-          <div className="flex flex-col mt-12 ">
+          <div className="flex flex-col mt-12 relative">
             <label
               htmlFor="What’s the idea..."
               className="text-[24px] font-semibold text-black mb-1"
@@ -111,8 +113,9 @@ const Form = () => {
               id="idea"
               type="text"
               placeholder="Your idea"
-              className="border-b border-black bg-transparent focus:outline-none text-gray-900 mt-5"
+              className="border-b border-gray-300 bg-transparent focus:outline-none text-gray-900 mt-5"
             />
+            <div className="hover-input"></div>
           </div>
           <Button
             text="Submit The Request"
