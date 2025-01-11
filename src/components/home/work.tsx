@@ -152,16 +152,23 @@ const Work = () => {
           className="h-[277px] w-[434px] object-cover rounded-xl"
         />
       </div>
-      <div className="h-screen flex items-center justify-center flex-col text-section">
+      <div className="h-screen flex items-center justify-center flex-col text-section ">
         <div className="bg-primary h-screen w-screen black-screen absolute z-10 translate-x-full flex items-center justify-between px-20">
-          <div className="p-5">
-            <div className="bg-purple-500 w-[5px] h-[300px] rounded-md">
+          <div className="w-[219px] h-[219px] rounded-full bg-[#c095ff] absolute -bottom-[80px] right-12 top-12"></div>
+          <div className="p-5 relative">
+            <div className="w-[219px] h-[219px] rounded-full bg-[#c095ff] absolute -bottom-[80px] -left-[60px]"></div>
+            <div className="bg-purple-500 w-[5px] h-[300px] rounded-md ml-3 relative">
               <div className="bg-white w-full h-[0px] white-scroll rounded-md"></div>
             </div>
+
+            <h1 className="text-[24px] font-medium italic text-[#E4D3FF] w-[513px] relative pl-3">
+              Each of our works were the best among several thousand other in
+              its niche
+            </h1>
           </div>
-          <div className="flex w-2/3">
-            <h1 className="text-[80px] text-purple-500 font-bold text-right p-10 capitalize">
-              Most Can Write Code but only a few can innovate solutions
+          <div className="flex w-[998px] relative">
+            <h1 className="text-[80px] text-[#E4D3FF] font-bold text-right p-10 capitalize leading-tight ">
+              Most can write code, but only a few can innovate solutions
             </h1>
             <Icon
               icon={"ci:double-quotes-l"}
@@ -169,7 +176,7 @@ const Work = () => {
             />
           </div>
         </div>
-        <div className="bg-secondary h-screen w-screen white-screen absolute z-10 translate-y-full">
+        <div className="h-screen w-screen white-screen absolute z-10 translate-y-full py-32">
           <WorkSlider />
         </div>
         <h1 className="text-[120px] font-bold capitalize relative z-[-10]">
