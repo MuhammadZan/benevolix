@@ -1,6 +1,12 @@
 import React, { useEffect } from "react";
 import gsap from "gsap";
 import { Icon } from "@iconify/react";
+import Image from "next/image";
+import p1 from "@/app/images/p1.jpg";
+import p2 from "@/app/images/p2.png";
+import p3 from "@/app/images/p3.png";
+import p4 from "@/app/images/p4.jpg";
+import WorkSlider from "../workSlider";
 const Work = () => {
   useEffect(() => {
     const { ScrollTrigger } = require("gsap/ScrollTrigger");
@@ -117,11 +123,35 @@ const Work = () => {
     });
   }, []);
   return (
-    <div className="relative work">
-      <div className="bg-primary h-[300px] w-[600px] rounded-xl shadow-lg shadow-black absolute top-[1500px] right-32 rotate-12 card-work"></div>
-      <div className="bg-primary h-[300px] w-[600px] rounded-xl shadow-lg shadow-black absolute top-[700px] right-10 rotate-3 card-work"></div>
-      <div className="bg-primary h-[300px] w-[600px] rounded-xl shadow-lg shadow-black absolute top-[1000px] -rotate-6 card-work"></div>
-      <div className="bg-primary h-[300px] w-[600px] rounded-xl shadow-lg shadow-black absolute top-[2000px] left-6 rotate-6 card-work"></div>
+    <div className="relative work px-5">
+      <div className="bg-primary h-[277px] w-[434px] rounded-xl shadow-lg shadow-black absolute top-[1500px] right-32 rotate-12 card-work">
+        <Image
+          src={p1}
+          alt="p1"
+          className="h-[277px] w-[434px] object-cover rounded-xl"
+        />
+      </div>
+      <div className="bg-primary h-[277px] w-[434px] rounded-xl shadow-lg shadow-black absolute top-[700px] right-10 rotate-3 card-work">
+        <Image
+          src={p2}
+          alt="p2"
+          className="h-[277px] w-[434px] object-cover rounded-xl"
+        />
+      </div>
+      <div className="bg-primary h-[277px] w-[434px] rounded-xl shadow-lg shadow-black absolute top-[1000px] -rotate-6 card-work">
+        <Image
+          src={p3}
+          alt="p3"
+          className="h-[277px] w-[434px] object-cover rounded-xl"
+        />
+      </div>
+      <div className="bg-primary h-[277px] w-[434px] rounded-xl shadow-lg shadow-black absolute top-[2000px] left-6 rotate-6 card-work">
+        <Image
+          src={p4}
+          alt="p4"
+          className="h-[277px] w-[434px] object-cover rounded-xl"
+        />
+      </div>
       <div className="h-screen flex items-center justify-center flex-col text-section">
         <div className="bg-primary h-screen w-screen black-screen absolute z-10 translate-x-full flex items-center justify-between px-20">
           <div className="p-5">
@@ -139,9 +169,13 @@ const Work = () => {
             />
           </div>
         </div>
-        <div className="bg-secondary h-screen w-screen white-screen absolute z-10 translate-y-full"></div>
-        <h1 className="text-[120px] font-bold capitalize">Each of our works</h1>
-        <h1 className="text-[120px] font-bold capitalize text-[#CDACFF]">
+        <div className="bg-secondary h-screen w-screen white-screen absolute z-10 translate-y-full">
+          <WorkSlider />
+        </div>
+        <h1 className="text-[120px] font-bold capitalize relative z-[-10]">
+          Each of our works
+        </h1>
+        <h1 className="text-[120px] font-bold capitalize text-[#CDACFF] ">
           were the best among
         </h1>
         <div className="text-[120px] font-bold capitalize flex justify-center gap-5">

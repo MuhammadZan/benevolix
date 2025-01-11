@@ -5,7 +5,7 @@ import stars from "@/app/images/stars.svg";
 import Button from "../shared/button";
 const Form = () => {
   return (
-    <div>
+    <div className="lg:max-w-[1440px] md:max-w-[744px] max-w-[375px] mx-auto p-5">
       <div className="flex justify-between my-32 px-8">
         <div className="w-[400px]">
           <Image src={logo} alt="logo" className="-ml-8" />

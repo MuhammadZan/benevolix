@@ -5,6 +5,11 @@ import Image from "next/image";
 import banner from "@/app/images/banner.png";
 import "swiper/css";
 import "swiper/css/effect-cards";
+import s1 from "@/app/images/s1.jpg";
+import s2 from "@/app/images/s2.jpg";
+import s3 from "@/app/images/s3.jpg";
+import s4 from "@/app/images/s4.png";
+import s5 from "@/app/images/s5.jpg";
 
 export default function Slider() {
   const [activeSlide, setActiveSlide] = useState(0);
@@ -12,23 +17,23 @@ export default function Slider() {
   const slides = [
     {
       service: "UI UX Design",
-      image: banner,
+      image: s2,
     },
     {
       service: "Web Development",
-      image: banner,
+      image: s3,
     },
     {
       service: "App Development",
-      image: banner,
+      image: s1,
     },
     {
       service: "Wordpress and Shopify",
-      image: banner,
+      image: s4,
     },
     {
       service: "Ecommerce",
-      image: banner,
+      image: s5,
     },
   ];
 
@@ -39,14 +44,14 @@ export default function Slider() {
   return (
     <div className="flex items-center justify-center gap-32  my-36">
       <div>
-        <div className="p-0 m-0 leading-tight">
+        <div className="p-0 m-0 leading-tight text-right">
           {slides.map((slide, index) => (
             <div
               key={index}
-              className={`cursor-pointer mb-2 text-[38px] font-[500] transition-all duration-500 ease-in-out transform ${
+              className={` mb-2 text-[38px] font-[500] transition-all duration-500 ease-in-out transform ${
                 activeSlide === index
-                  ? "text-[55px] border-b-2 inline-block border-black opacity-100 scale-105"
-                  : "opacity-50 scale-95"
+                  ? "text-[55px] border-b-2 inline-block border-black opacity-100 scale-105 "
+                  : "opacity-50 scale-95 "
               }`}
               onClick={() => handleTextClick(index)}
             >
