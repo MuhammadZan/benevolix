@@ -39,39 +39,46 @@ const Header = () => {
   }, []);
   return (
     <>
-      <div className="flex justify-between gap-5 items-center relative z-10">
-        <div className="">
-          <Image src={logo} className="w-[200px]" alt="logo" />
-        </div>
-        <div className="flex gap-8 items-center ">
-          <div className="hover-this p-3">
-            <p className="text-secondary text-light text-[16px] cursor-none link">
-              Portfolio
-            </p>
+      <div className="lg:block hidden">
+        <div className="flex justify-between gap-5 items-center relative z-10">
+          <div className="">
+            <Image src={logo} className="w-[200px]" alt="logo" />
           </div>
-          <div className="hover-this p-3">
-            <p className="text-secondary text-light text-[16px] cursor-none link">
-              Vision
-            </p>
-          </div>
-          <div className="hover-this p-3">
-            <p className="text-secondary text-light text-[16px] cursor-none link">
-              Services
-            </p>
-          </div>
-          <div className="hover-this p-3">
-            <p className="text-secondary text-light text-[16px] cursor-none link">
-              Our Teams
-            </p>
-          </div>
-        </div>
-        <div className="p-3 hover-this" ref={buttonRef}>
-          <button className="rounded-full px-6 py-2.5 border-2 border-black items-center link">
-            <div className="flex items-center gap-2 ">
-              <span className="bg-[#26FF00] rounded-full p-[2.2px] inline-block"></span>
-              <h1>Lets Chat</h1>
+          <div className="flex gap-8 items-center ">
+            <div className="hover-this p-3">
+              <p className="text-secondary text-light text-[16px] cursor-none link">
+                Home
+              </p>
             </div>
-          </button>
+            <div className="hover-this p-3">
+              <p className="text-secondary text-light text-[16px] cursor-none link">
+                Portfolio
+              </p>
+            </div>
+            <div className="hover-this p-3">
+              <p className="text-secondary text-light text-[16px] cursor-none link">
+                Vision
+              </p>
+            </div>
+            <div className="hover-this p-3">
+              <p className="text-secondary text-light text-[16px] cursor-none link">
+                Services
+              </p>
+            </div>
+            <div className="hover-this p-3">
+              <p className="text-secondary text-light text-[16px] cursor-none link">
+                Our Teams
+              </p>
+            </div>
+          </div>
+          <div className="p-3 hover-this" ref={buttonRef}>
+            <button className="rounded-full px-6 py-2.5 border-2 border-black items-center link">
+              <div className="flex items-center gap-2 ">
+                <span className="bg-[#26FF00] rounded-full p-[2.2px] inline-block"></span>
+                <h1>Lets Chat</h1>
+              </div>
+            </button>
+          </div>
         </div>
       </div>
     </>

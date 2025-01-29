@@ -7,16 +7,6 @@ body {
   overflow-x: hidden;
   cursor: none;
 }
-
-.scale-0 {
-  transform: scale(0);
-  opacity: 0;
-}
-.scale-1 {
-  transform: scale(1);
-  opacity: 1;
-}
-
 ::-webkit-scrollbar {
   width: 8px;
   height: 4px;

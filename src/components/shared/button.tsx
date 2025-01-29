@@ -42,7 +42,7 @@ const Button: React.FC<ButtonProps> = ({ text, className = "", onClick }) => {
   return (
     <div className="p-4 hover-this" ref={buttonRef} onClick={onClick}>
       <button
-        className={`px-4 py-4 text-[24px] font-medium rounded-full border-2 border-secondary text-secondary transition-colors hover:bg-purple-400  hover:border-purple-400 ${className} link`}
+        className={`px-4 py-4 2xl:text-[24px] xl:text-[18px] lg:text-[14px] text-[20px] font-medium rounded-full border-2 border-secondary text-secondary transition-colors hover:bg-purple-400  hover:border-purple-400 ${className} link`}
       >
         {text}
       </button>

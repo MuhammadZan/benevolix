@@ -19,7 +19,15 @@ const Index = () => {
     <>
       <div className="">
         <HomePage />
-        <div className="cursor z-20" ref={cursor} onClick={()=>{alert("cursor click"),console.log("click")}}></div>
+        <div className="hidden lg:block">
+          <div
+            className="cursor z-20"
+            ref={cursor}
+            onClick={() => {
+              alert("cursor click"), console.log("click");
+            }}
+          ></div>
+        </div>
       </div>
     </>
   );
