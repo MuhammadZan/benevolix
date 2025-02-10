@@ -49,7 +49,7 @@ body {
 .link {
   display: inline-block;
   pointer-events: none;
-  transition: transform 0.1s linear;
+  transition: transform 0.3s ease;
 }
 
 .cursor {
@@ -59,7 +59,7 @@ body {
   background-color: #fff;
   border-radius: 50%;
   mix-blend-mode: difference;
-  transition: transform 0.3s ease-out;
+  transition: transform 0.4s ease-in-out;
 }
 .hover-input {
   position: absolute;

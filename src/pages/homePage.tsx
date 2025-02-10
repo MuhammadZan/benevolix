@@ -16,8 +16,8 @@ const HomePage = () => {
       <HeroSection />
       <About />
       <MobileCard />
-      <Work />
-      <Slider />
+      {/* <Work />
+      <Slider /> */}
       <Form />
     </>
   );

@@ -14,7 +14,7 @@ const Button: React.FC<ButtonProps> = ({ text, className = "", onClick }) => {
         buttonRef.current.querySelector(".link");
       const { offsetX: x, offsetY: y } = e,
         { offsetWidth: width, offsetHeight: height } = buttonRef.current,
-        move = 25,
+        move = 30,
         xMove = (x / width) * (move * 2) - move,
         yMove = (y / height) * (move * 2) - move;
       if (!element) {
