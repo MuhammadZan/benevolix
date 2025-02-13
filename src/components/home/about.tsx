@@ -98,7 +98,7 @@ const About = () => {
       .fromTo(
         ".portfolio",
         { xPercent: 130, rotate: 5, scale: 1.4, opacity: 0.7 },
-        { xPercent: 0, rotate: 0, scale: 1, opacity: 1 },
+        { xPercent: 0, rotate: 0, scale: 1, opacity: 1,ease:"power2.out" },
         "<"
       )
       .fromTo(".slider", { opacity: 0, y: 100 }, { opacity: 1, y: 0 })
@@ -112,7 +112,7 @@ const About = () => {
         justifyContent: "center",
         alignItems: "center",
       })
-      .fromTo(".tech-stack-text", { y: 5, scaleY: 0 }, { y: 0, scaleY: 1 })
+      .fromTo(".tech-stack-text", { y: 5, scale:0,opacity:0.5,transformOrigin:"bottom" }, { y: 0,scale:1,opacity:1 })
       .fromTo(
         ".contact-text",
         { opacity: 0, y: 10 },

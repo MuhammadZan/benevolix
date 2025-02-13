@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body {
-  background-color: #f3eaff;
+  background-color: #faf5ff;
   overflow-x: hidden;
   cursor: none;
 }
@@ -55,11 +55,11 @@ body {
 .cursor {
   pointer-events: none;
   position: fixed;
-  padding: 0.3rem;
+  padding: 5rem;
   background-color: #fff;
   border-radius: 50%;
-  mix-blend-mode: difference;
-  transition: transform 0.4s ease-in-out;
+  mix-blend-mode: lighten;
+  /* transition: all 0.1s ease; */
 }
 .hover-input {
   position: absolute;

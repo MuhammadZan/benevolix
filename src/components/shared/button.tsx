@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from "react";
-
+import gsap from "gsap";
 interface ButtonProps {
   text: string;
   className?: string;
@@ -20,16 +20,14 @@ const Button: React.FC<ButtonProps> = ({ text, className = "", onClick }) => {
       if (!element) {
         return;
       }
-      element.style.transform = `translate(${xMove}px, ${yMove}px)`;
-      const cursor: HTMLDivElement | null = document.querySelector(".cursor");
-      if (cursor) {
-        cursor.style.transform = "scale(8)";
-      }
-      if (e.type === "mouseleave") {
-        element.style.transform = "";
-        if (cursor) {
-          cursor.style.transform = "scale(1)";
-        }
+      gsap.to(element, {
+        x: xMove,
+        y: yMove,
+        ease: "power2.out",
+        duration: 0.5,
+      });
+      if (e.type == "mouseleave") {
+        gsap.to(element, { x: 0, y: 0, ease: "power2.out", duration: 0.5 });
       }
     }
   };
