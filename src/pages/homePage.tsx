@@ -7,6 +7,7 @@ import Work from "@/components/home/work";
 import Slider from "@/components/home/sliders";
 import BottomMenu from "@/components/globals/bottom-menu";
 import MobileCard from "@/components/home/mobile-card";
+import TechStack from "@/components/home/TechStack";
 
 const HomePage = () => {
   return (
@@ -15,6 +16,7 @@ const HomePage = () => {
       <BottomMenu />
       <HeroSection />
       <About />
+      <TechStack />
       <MobileCard />
       {/* <Work />
       <Slider /> */}

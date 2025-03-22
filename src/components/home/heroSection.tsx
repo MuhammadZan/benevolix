@@ -22,14 +22,23 @@ const HeroSection = () => {
         duration: 1.3,
         ease: "power2.out",
       })
-      .to(".line", {
-        width: 100,
-      },"<").to(".wrapper-description", {
-        opacity: 1,
-        width: 450,
-        duration: 1.3,
-        ease: "power2.out",
-      },"<")
+      .to(
+        ".line",
+        {
+          width: 100,
+        },
+        "<"
+      )
+      .to(
+        ".wrapper-description",
+        {
+          opacity: 1,
+          width: 450,
+          duration: 1.3,
+          ease: "power2.out",
+        },
+        "<"
+      );
     gsap.fromTo(
       ".tag-line",
       {

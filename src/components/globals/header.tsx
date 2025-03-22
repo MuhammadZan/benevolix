@@ -30,26 +30,25 @@ const Header = () => {
       });
     }
   }, []);
-
+  useEffect(() => {
+    const body = document.querySelector("body");
+    isMenuVisible
+      ? body && (body.style.overflow = "hidden")
+      : body && (body.style.overflow = "auto");
+  }, [isMenuVisible]);
   return (
     <>
       <div className="lg:block hidden ">
         <div className="absolute z-[100] w-screen h-screen border-2">
           <div className="absolute z-10 w-full h-full flex justify-center items-center p-10 flex-col text-white">
             <div className="hover-this p-3">
-              <h1 className="text-8xl link nav-links opacity-0">
-                About
-              </h1>
+              <h1 className="text-8xl link nav-links opacity-0">About</h1>
             </div>
             <div className="hover-this p-3">
-              <h1 className="text-8xl link nav-links opacity-0">
-                Portfolio
-              </h1>
+              <h1 className="text-8xl link nav-links opacity-0">Portfolio</h1>
             </div>
             <div className="hover-this p-3">
-              <h1 className="text-8xl link nav-links opacity-0">
-                Services
-              </h1>
+              <h1 className="text-8xl link nav-links opacity-0">Services</h1>
             </div>
             <div className="hover-this p-3">
               <h1 className="text-8xl link nav-links opacity-0">

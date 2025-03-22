@@ -41,7 +41,7 @@ const MobileCard = () => {
         </h1>
 
         {cardsData.map((card, index) => (
-          <div className="my-6">
+          <div className="my-6" key={index}>
             <Cards
               key={index}
               className={card.className}

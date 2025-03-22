@@ -28,7 +28,7 @@ const WorkSlider = () => {
                 <Image
                   src={s6}
                   alt="My Dna"
-                  className="rounded-lg h-[570px] w-4/3"
+                  className="rounded-lg h-[370px] w-4/3"
                 />
               </div>
             </SwiperSlide>

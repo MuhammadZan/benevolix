@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import Cards from "../shared/cards";
 import Image from "next/image";
 import panda from "@/app/images/panda.png";
@@ -7,6 +7,8 @@ import p2 from "@/app/images/p2.png";
 import p3 from "@/app/images/p3.png";
 import p4 from "@/app/images/p4.jpg";
 import WorkSlider from "../workSlider";
+import Marquee from "react-fast-marquee";
+import ProjectCard from "../shared/projectCard";
 const About = () => {
   const cardsData = [
     {
@@ -43,15 +45,16 @@ const About = () => {
     gsap.registerPlugin(ScrollTrigger);
     const cards = gsap.utils.toArray(".card");
     const work_cards = gsap.utils.toArray(".card-work");
+    const project_cards = gsap.utils.toArray(".slides");
+    gsap.set(".slider", { opacity: 0 });
     gsap
       .timeline({
         scrollTrigger: {
           trigger: ".about",
           start: "top top",
-          end: () => "+=7000",
+          end: () => "+=2000",
           scrub: 1.4,
           pin: true,
-          anticipatePin: 1,
         },
       })
       .to(cards, {
@@ -98,27 +101,50 @@ const About = () => {
       .fromTo(
         ".portfolio",
         { xPercent: 130, rotate: 5, scale: 1.4, opacity: 0.7 },
-        { xPercent: 0, rotate: 0, scale: 1, opacity: 1,ease:"power2.out" },
+        {
+          xPercent: 0,
+          rotate: 0,
+          scale: 1,
+          opacity: 1,
+          ease: "power2.out",
+        },
         "<"
       )
-      .fromTo(".slider", { opacity: 0, y: 100 }, { opacity: 1, y: 0 })
-      .to(".slider", { opacity: 0, duration: 0.1 })
-      .to(".portfolio", {
-        width: 200,
-        height: 50,
-        yPercent: 5,
-        borderRadius: 30,
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-      })
-      .fromTo(".tech-stack-text", { y: 5, scale:0,opacity:0.5,transformOrigin:"bottom" }, { y: 0,scale:1,opacity:1 })
-      .fromTo(
-        ".contact-text",
-        { opacity: 0, y: 10 },
-        { opacity: 1, y: 0 },
-        "<"
-      );
+      .to(".slider", { opacity: 1 })
+      .to(project_cards, {
+        xPercent: -65 * (project_cards.length - 1),
+      });
+  }, []);
+  const buttonRef = useRef<HTMLDivElement | null>(null);
+  let lastX = 0;
+  let lastY = 0;
+  const animateit = function (e: any) {
+    if (buttonRef.current) {
+      const element: HTMLButtonElement | null =
+        buttonRef.current.querySelector(".inner-button");
+      if (!element) return;
+
+      const { clientX: mouseX, clientY: mouseY } = e;
+
+      const deltaX = mouseX - lastX;
+      const deltaY = mouseY - lastY;
+
+      lastX = mouseX;
+      lastY = mouseY;
+
+      const moveAmount = 15;
+
+      gsap.to(element, {
+        x: `-=${deltaX * moveAmount * 0.02}`, // Move opposite to cursor
+        y: `-=${deltaY * moveAmount * 0.02}`,
+        ease: "power2.out",
+      });
+    }
+  };
+  useEffect(() => {
+    if (document) {
+      document.addEventListener("mousemove", animateit);
+    }
   }, []);
   return (
     <div className="overflow-x-hidden w-screen md:block hidden">
@@ -144,7 +170,7 @@ const About = () => {
               <Image
                 src={panda}
                 alt="panda"
-                className="w-16 h-16 object-contain"
+                className="w-16 h-16 object-contain panda"
               />
             </div>
           </div>
@@ -183,17 +209,42 @@ const About = () => {
             />
           </div>
         </div>
-        <div className="skills absolute h-screen w-screen top-0 left-0 z-20 flex justify-center items-center flex-col">
-          <h1 className="text-5xl absolute top-[30%] text-center mb-5 tech-stack-text">
-            Our Immense{" "}
-            <span className="text-primary font-bold capitalize">
-              tech stack
-            </span>{" "}
-            & team of <br /> experts got you covered
-          </h1>
-          <div className="portfolio h-screen w-screen bg-black mix-blend-difference">
-            <div className="contact-text text-white">Contact Us</div>
-            <div className="slider">{/* <WorkSlider /> */}</div>
+        <div className="absolute h-screen w-screen top-0 left-0 z-20 flex justify-center items-center flex-col overflow-hidden">
+          <div className="portfolio h-screen w-screen bg-black mix-blend-difference relative z-10 overflow-hidden">
+            <div className="slider p-10">
+              <h1 className="text-8xl text-white font-bold">
+                We help your business <br /> standout
+              </h1>
+              <p className="text-white  mt-5 font-semibold text-2xl">
+                By Creating{" "}
+                <span className="font-bold underline">
+                  badass visual representations
+                </span>{" "}
+                and crazy websites we help your brand comes to spotlight
+              </p>
+              <div style={{ display: "-webkit-box" }}>
+                <ProjectCard />
+                <ProjectCard />
+                <ProjectCard />
+                <ProjectCard />
+                <div className="slides h-[300px] w-[500px]">
+                  <div
+                    className="rotating-button relative h-full w-full flex items-center justify-center mt-5"
+                    ref={buttonRef}
+                  >
+                    <div className="h-[220px] w-[220px] relative border-white border-2 rounded-full bg-none flex items-center justify-center group inner-button mt-14 ml-20">
+                      <div className="bg-white group-hover:scale-0 h-full transition-all duration-300 w-full rounded-full absolute"></div>
+                      <p
+                        className="text-white text-xl font-semibold text-center mix-blend-difference transition-all w-[400px] animate-spin"
+                        style={{ animationDuration: "30s" }}
+                      >
+                        Explore Our Showcase
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
